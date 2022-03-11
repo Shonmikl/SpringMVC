@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Queue;
 
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
@@ -19,7 +18,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
-
         return session.createQuery("from Employee", Employee.class).getResultList();
     }
 

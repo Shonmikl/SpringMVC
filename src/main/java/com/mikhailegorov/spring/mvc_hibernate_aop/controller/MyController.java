@@ -30,6 +30,7 @@ public class MyController {
         model.addAttribute("employee", employee);
         return "employee-info";
     }
+
     @RequestMapping("saveEmployee")
     public String saveEmployee(@ModelAttribute("employee") Employee employee) {
         employeeService.saveEmployee(employee);
